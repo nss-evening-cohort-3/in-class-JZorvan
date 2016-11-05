@@ -3,5 +3,27 @@
     ViewBag.Title = "Angular";
 }
 
-<h2>Angular</h2>
+<h2 class="text-center">Basics of Forms: Angular Version</h2>
+<br />
 
+<div ng-controller="AppCtrl">
+    <form class="text-center" id="Form">
+
+        @Html.AntiForgeryToken()
+
+        <label for="email">Email: </label>
+        <br />
+        <input type="email" name="email" />
+        <br /><br />
+        <label for="password1">Password: </label>
+        <br />
+        <input type="password" name="password1" />
+        <br /><br />
+        <label for="password2">Verify Password: </label>
+        <br />
+        <input type="password" name="password2" />
+        <br /><br />
+        <button type="submit" class="btn btn-info" ng-click="formSubmit()">Submit</button>
+
+    </form>
+</div>
