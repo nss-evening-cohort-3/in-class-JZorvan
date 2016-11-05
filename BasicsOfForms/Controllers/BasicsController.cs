@@ -18,10 +18,14 @@ namespace BasicsOfForms.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection form)
         {
-            Console.WriteLine(form);
             int i = 0;
+            return View();   
+        }
+
+        // GET: Razor
+        public ActionResult Razor()
+        {
             return View();
-            
         }
     }
 }

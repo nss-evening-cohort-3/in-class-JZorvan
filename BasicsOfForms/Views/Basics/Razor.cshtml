@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Razor";
+}
+
+<h2 class="text-center">Basics of Forms: @ViewBag.Title Version</h2><br />
+
+@using (Html.BeginForm("Razor", "Basics", FormMethod.Post, new { @class = "text-center" }))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.Label("Email: ")
+    <br />
+    @Html.TextBox("email")
+    <br /><br />
+    @Html.Label("Password: ")
+    <br />
+    @Html.TextBox("password1")
+    <br /><br />
+    @Html.Label("Verify Password: ")
+    <br />
+    @Html.TextBox("password2")
+    <br /><br />
+    <input type="submit" value="Submit" class="btn btn-info" />
+
+}
