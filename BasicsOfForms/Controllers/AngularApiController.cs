@@ -9,6 +9,10 @@ namespace BasicsOfForms.Controllers
 {
     public class AngularApiController : ApiController
     {
-
+        // POST: Angular API
+        public void Post(dynamic value)
+        {
+            int i = 0;
+        }
     }
 }
