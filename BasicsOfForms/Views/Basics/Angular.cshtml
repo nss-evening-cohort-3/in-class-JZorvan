@@ -7,23 +7,23 @@
 <br />
 
 <div ng-controller="AppCtrl">
-    <form class="text-center" id="Form">
+    <form class="text-center" id="Form" ng-submit="formSubmit(user)">
 
         @Html.AntiForgeryToken()
 
         <label for="email">Email: </label>
         <br />
-        <input type="email" name="email" />
+        <input type="email" id="email" ng-model="user.email"/>
         <br /><br />
         <label for="password1">Password: </label>
         <br />
-        <input type="password" name="password1" />
+        <input type="password" id="password1" ng-model="user.password1"/>
         <br /><br />
         <label for="password2">Verify Password: </label>
         <br />
-        <input type="password" name="password2" />
+        <input type="password" id="password2" ng-model="user.password2"/>
         <br /><br />
-        <button type="submit" class="btn btn-info" ng-click="formSubmit()">Submit</button>
+        <button type="submit" class="btn btn-info">Submit</button>
 
     </form>
 </div>
