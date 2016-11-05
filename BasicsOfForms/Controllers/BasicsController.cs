@@ -13,5 +13,15 @@ namespace BasicsOfForms.Controllers
         {
             return View();
         }
+
+        // POST: Basics
+        [HttpPost]
+        public ActionResult Index(FormCollection form)
+        {
+            Console.WriteLine(form);
+            int i = 0;
+            return View();
+            
+        }
     }
 }
